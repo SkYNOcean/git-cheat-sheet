@@ -223,6 +223,24 @@ git config user.name "Jakub Pawlowicz"
 git config user.email '<email>'
 ```
 
+
+#### Github Multiple Account connecting (assign username & email each Repo)
+<i>Thanks to @[Greg Leszek](https://stackoverflow.com/users/1107028/greg-leszek) at [stackoverflow](https://stackoverflow.com/questions/3860112/multiple-github-accounts-on-the-same-computer#27407168)</i><br>
+change remote url to https:
+```shell
+git remote set-url origin https://USERNAME@github.com/USERNAME/PROJECTNAME.git
+```
+and you are good to go:
+```shell
+git push
+```
+To ensure that the commits appear as performed by USERNAME, one can setup the user.name and user.email for this project, too:
+```shell
+git config user.name USERNAME
+git config user.email USERNAME@example.com
+```
+
+
 ####
 ```shell
 git config --global color.diff auto
